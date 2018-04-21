@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: f136ac395f2fa44e3176ddecd27738ca66cec8074b0e1da3da42b78db2f44a90
+-- hash: 7a300aa0aa13fc7b41c65516b783918cfae09a701c35fb6acf6ce16fecd57c50
 
 name:           hurle
 version:        0.1.0.0
@@ -30,6 +30,7 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , parsec
   exposed-modules:
       Lib
   other-modules:
