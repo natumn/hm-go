@@ -12,12 +12,6 @@ import           Text.Parsec                    ( char
 import           Text.Parsec.String             ( Parser )
 
 data Exp = Add Exp Exp | Mul Exp Exp | Nat Int deriving Show
-{- BNF of one digit addtion & multiplication
-expr ::= term ('+' expr | ε)
-term ::= factor ('*' term | ε)
-factor ::= '(' expr ')' | nat
-nat ::= '0' | '1' | '2' | ...
--}
 
 -- expr ::= term ('+' expr | ε)
 expr :: Parser Exp
@@ -205,6 +199,7 @@ eval xs = case parse expr xs of
 
 someFunc :: IO ()
 someFunc = putStrLn "someFunc"
+
 
 
 
