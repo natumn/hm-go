@@ -1,10 +1,10 @@
 name:                hurle
 version:             0.1.0.0
-github:              "githubuser/hurle"
+github:              "natumn/hurle"
 license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2018 Author name here"
+author:              "natumn(koki natsume)"
+maintainer:          "natsume.pcuse75@gmail.com"
+copyright:           "natumn"
 
 extra-source-files:
 - README.md
@@ -17,7 +17,7 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on Github at <https://github.com/githubuser/hurle#readme>
+description:         Please see the README on Github at <https://github.com/natumn/hurle#readme>
 
 dependencies:
 - base >= 4.7 && < 5
@@ -30,7 +30,7 @@ library:
 executables:
   hurle-exe:
     main:                Main.hs
-    source-dirs:         app
+    source-dirs:         src
     ghc-options:
     - -threaded
     - -rtsopts
