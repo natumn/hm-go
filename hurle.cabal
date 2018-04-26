@@ -2,16 +2,16 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 7a300aa0aa13fc7b41c65516b783918cfae09a701c35fb6acf6ce16fecd57c50
+-- hash: b3ef708df706c977e6ac6d6928351cff09dc8489a6f5ac58c015f863d7adb157
 
 name:           hurle
 version:        0.1.0.0
-description:    Please see the README on Github at <https://github.com/githubuser/hurle#readme>
-homepage:       https://github.com/githubuser/hurle#readme
-bug-reports:    https://github.com/githubuser/hurle/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2018 Author name here
+description:    Please see the README on Github at <https://github.com/natumn/hurle#readme>
+homepage:       https://github.com/natumn/hurle#readme
+bug-reports:    https://github.com/natumn/hurle/issues
+author:         natumn(koki natsume)
+maintainer:     natsume.pcuse75@gmail.com
+copyright:      natumn
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -23,16 +23,23 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/hurle
+  location: https://github.com/natumn/hurle
 
 library
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5
-    , parsec
+    , haskeline
+    , mtl
+    , parsec >=3.1
+    , transformers
   exposed-modules:
+      Lexer
       Lib
+      Main
+      Parser
+      Syntax
   other-modules:
       Paths_hurle
   default-language: Haskell2010
@@ -40,12 +47,19 @@ library
 executable hurle-exe
   main-is: Main.hs
   hs-source-dirs:
-      app
+      src
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , haskeline
     , hurle
+    , mtl
+    , parsec >=3.1
   other-modules:
+      Lexer
+      Lib
+      Parser
+      Syntax
       Paths_hurle
   default-language: Haskell2010
 
@@ -57,7 +71,10 @@ test-suite hurle-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , haskeline
     , hurle
+    , mtl
+    , parsec >=3.1
   other-modules:
       Paths_hurle
   default-language: Haskell2010

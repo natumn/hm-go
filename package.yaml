@@ -21,11 +21,20 @@ description:         Please see the README on Github at <https://github.com/natu
 
 dependencies:
 - base >= 4.7 && < 5
+- parsec >= 3.1
+- mtl
+- haskeline
 
 library:
   source-dirs: src
   dependencies:
-  - parsec
+  # - base
+  # - parsec
+  # - mtl
+  # - haskeline
+  # - transformers
+  # - llvm-hs
+  # - llvm-hs-pure
 
 executables:
   hurle-exe:
