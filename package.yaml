@@ -24,6 +24,8 @@ dependencies:
 - parsec >= 3.1
 - mtl
 - haskeline
+- llvm-hs
+- llvm-hs-pure
 
 library:
   source-dirs: src
