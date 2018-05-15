@@ -23,7 +23,6 @@ process modo source = do
 processFile :: String -> IO (Maybe AST.Module)
 processFile fname = readFile fname >>= process initModule
 
-
 repl :: IO ()
 repl = runInputT defaultSettings (loop initModule)
   where

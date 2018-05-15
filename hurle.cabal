@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b3ef708df706c977e6ac6d6928351cff09dc8489a6f5ac58c015f863d7adb157
+-- hash: ca6ac178045d3e9883b72640b19be6888cb812037d11d96eb96c2aadffe61ff7
 
 name:           hurle
 version:        0.1.0.0
@@ -31,9 +31,10 @@ library
   build-depends:
       base >=4.7 && <5
     , haskeline
+    , llvm-hs
+    , llvm-hs-pure
     , mtl
     , parsec >=3.1
-    , transformers
   exposed-modules:
       Lexer
       Lib
@@ -53,6 +54,8 @@ executable hurle-exe
       base >=4.7 && <5
     , haskeline
     , hurle
+    , llvm-hs
+    , llvm-hs-pure
     , mtl
     , parsec >=3.1
   other-modules:
@@ -73,6 +76,8 @@ test-suite hurle-test
       base >=4.7 && <5
     , haskeline
     , hurle
+    , llvm-hs
+    , llvm-hs-pure
     , mtl
     , parsec >=3.1
   other-modules:
